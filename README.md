@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Description  
+
+This is VCal, an open-source project created by three students at Rensselaer Polytechnic Institute as a part of the Rensselaer Center for Open Source. Our objective is to create an improved calendar app for students and programmers that minimizes input to improve user experience. It allows the easy placement and management of event schedules with keyboard shortcuts, dragging, expansion, and basic language processing. The core of the idea is to make the creation and maintenance of the calendar as easy to do as possible without constant pressing and long inputs.
+
 ## Getting Started
 
 First, run the development server:
