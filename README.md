@@ -2,6 +2,8 @@
 
 VCal is an open-source calendar application developed by three students at Rensselaer Polytechnic Institute in collaboration with the Rensselaer Center for Open Source. Our goal is to provide an intuitive calendar experience for students and programmers, focusing on minimizing input to enhance user experience. The app offers features such as keyboard shortcuts, drag-and-drop event scheduling, expansion, and basic language processing to facilitate effortless calendar management.
 
+## Technologies Used
+
 ## Getting Started
 
 First, run the development server:
