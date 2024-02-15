@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VCal
 
-## Description
-
-This is VCal, an open-source project created by three students at Rensselaer Polytechnic Institute as a part of the Rensselaer Center for Open Source. Our objective is to create an improved calendar app for students and programmers that minimizes input to improve user experience. It allows the easy placement and management of event schedules with keyboard shortcuts, dragging, expansion, and basic language processing. The core of the idea is to make the creation and maintenance of the calendar as easy to do as possible without constant pressing and long inputs.
+VCal is an open-source calendar application developed by three students at Rensselaer Polytechnic Institute in collaboration with the Rensselaer Center for Open Source. Our goal is to provide an intuitive calendar experience for students and programmers, focusing on minimizing input to enhance user experience. The app offers features such as keyboard shortcuts, drag-and-drop event scheduling, expansion, and basic language processing to facilitate effortless calendar management.
 
 ## Getting Started
 
@@ -26,15 +24,17 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the languages used, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Learn MongoDB](https://www.mongodb.com/basics) - learn about MongoDB features.
+- [React Documentation](https://react.dev/learn) - learn the basics of React.
 
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
