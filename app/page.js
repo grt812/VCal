@@ -1,5 +1,5 @@
 import Image from "next/image";
-import clientPromise from "@/app/lib/mongodb.js"; 
+// import clientPromise from "@/app/lib/mongodb.js"; 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
