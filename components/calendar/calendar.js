@@ -46,9 +46,9 @@ export default function Calendar() {
 
   return (
     <div className="calendar">
-      <div className="header">
+      <div className="flex header">
         <button onClick={goToPreviousMonth}>&lt;</button>
-        <span>{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</span>
+        <span class="grow text-center">{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</span>
         <button onClick={goToNextMonth}>&gt;</button>
       </div>
       <div className="days">
