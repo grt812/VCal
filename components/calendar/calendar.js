@@ -48,7 +48,7 @@ export default function Calendar() {
     <div className="calendar">
       <div className="header">
         <button onClick={goToPreviousMonth}>&lt;</button>
-        <h2>{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</h2>
+        <span>{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</span>
         <button onClick={goToNextMonth}>&gt;</button>
       </div>
       <div className="days">
