@@ -41,10 +41,10 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh; */
 }
 
 
@@ -102,3 +102,7 @@ button:hover {
 .date{
   padding: 20px;
 }
+
+/* #navigation-menu{
+} */
+

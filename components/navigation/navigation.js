@@ -1,8 +1,6 @@
 "use client";
-// import Calendar from "../calendar/calendar";
 
 export default function Navigation({currentDate, prevMonth, nextMonth}) {
-
     return(
         <div id="navigation" className="flex header">
             <button onClick={prevMonth}>&lt;</button>

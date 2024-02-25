@@ -48,7 +48,7 @@ export default function Calendar() {
 
   return (
     <>
-      <Navigation id="navigation-menu" currentDate={currentDate} prevMonth={goToPrevMonth} nextMonth={goToNextMonth} ></Navigation>
+      <Navigation id="navigation-menu" currentDate={date} prevMonth={goToPrevMonth} nextMonth={goToNextMonth} ></Navigation>
       <div id="calendar">
         <div className="days">
           {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
