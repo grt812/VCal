@@ -35,9 +35,12 @@ body {
 
 *{
   color: black;
+  box-sizing: border-box;
 }
 
-body {
+
+
+html, body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
@@ -45,6 +48,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; */
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -73,12 +78,24 @@ input {
   box-sizing: border-box;
 }
 
+#calendar-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 #navigation{
   width: 100%;
 }
 
 button {
-  /* width: 100%; */
   padding: 10px;
   background-color: #4caf50;
   color: #fff;
@@ -99,8 +116,15 @@ button:hover {
   width: 100%;
 }
 
+.dates{
+  justify-items: stretch;
+  align-items: stretch;
+  /* height: 100%; */
+  flex-grow: 1;
+}
+
 .date{
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 /* #navigation-menu{

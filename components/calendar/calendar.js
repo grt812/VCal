@@ -47,7 +47,7 @@ export default function Calendar() {
   const blankCells = Array.from({ length: firstDayOfMonth }, (_, index) => index);
 
   return (
-    <>
+    <div id="calendar-container">
       <Navigation id="navigation-menu" currentDate={date} prevMonth={goToPrevMonth} nextMonth={goToNextMonth} ></Navigation>
       <div id="calendar">
         <div className="days">
@@ -64,7 +64,7 @@ export default function Calendar() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
