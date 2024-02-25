@@ -121,10 +121,14 @@ button:hover {
   align-items: stretch;
   /* height: 100%; */
   flex-grow: 1;
+  background-color:#ddd;
+  gap: 1px;
 }
 
 .date{
-  /* padding: 20px; */
+  /* text-align: center; */
+  /* border: 1px solid grey; */
+  background-color: white;
 }
 
 /* #navigation-menu{
