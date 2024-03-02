@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import Navigation from '../navigation/navigation';
 
 
@@ -36,6 +37,19 @@ export default function Calendar() {
     newDate.setMonth(newDate.getMonth() + 1);
     setDate(newDate);
   };
+
+  const handleKeyDown = (event) => {
+    const { key } = event;
+
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [date]);
 
   const daysInMonth = getDaysInMonth(date);
   const firstDayOfMonth = getFirstDayOfMonth(date);
