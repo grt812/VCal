@@ -39,12 +39,24 @@ export default function Calendar() {
 
   const daysInMonth = getDaysInMonth(date);
   const firstDayOfMonth = getFirstDayOfMonth(date);
-
-  // Create an array of days in the month
   const monthDays = Array.from({ length: daysInMonth }, (_, index) => index + 1);
-
-  // Create an array to represent blank cells before the first day of the month
   const blankCells = Array.from({ length: firstDayOfMonth }, (_, index) => index);
+
+  const AddEvent = (eventData) => {
+    setEvents([...events, eventData]); 
+  };
+
+  const EditEvent = (index, updatedEvent) => {
+    const updatedEvents = [...events];
+    updatedEvents[index] = updatedEvent;
+    setEvents(updatedEvents);
+  };
+
+  const DeleteEvent = (index) => {
+    const updatedEvents = [...events];
+    updatedEvents.splice(index, 1);
+    setEvents(updatedEvents);
+  };
 
   return (
     <div id="calendar-container">
