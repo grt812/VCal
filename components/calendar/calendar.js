@@ -38,6 +38,7 @@ export default function Calendar() {
     setDate(newDate);
   };
 
+  //Add event listener for keydown to switch between cells
   const handleKeyDown = (event) => {
     const { key } = event;
 
