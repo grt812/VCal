@@ -36,6 +36,7 @@ body {
 *{
   color: black;
   box-sizing: border-box;
+  transition: all 0.25s;
 }
 
 
@@ -97,17 +98,17 @@ input {
 
 button {
   padding: 10px;
-  background-color: #4caf50;
+  background: linear-gradient(45deg, rgba(255,255,0,1) 0%, rgba(120,255,0,1) 100%);
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
   cursor: pointer;
   display: inline-block;
   user-select: none;
 }
 
 button:hover {
-  background-color: #45a049;
+  box-shadow: 0 0 50px 5px rgba(200, 200, 200, 0.8);
 }
 
 .dates, .days{
