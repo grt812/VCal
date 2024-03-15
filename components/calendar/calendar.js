@@ -58,7 +58,7 @@ export default function Calendar() {
 
   const moveSelectedRight = () => {
     setSelectedCell((current)=>{
-      current = current+1 % monthDays.length;
+      current = mod(current+1,monthDays.length);
       if(current != mod(current, monthDays.length)){
         current = mod(current, monthDays.length);
       } else {
@@ -71,7 +71,7 @@ export default function Calendar() {
 
   const moveSelectedLeft = () => {
     setSelectedCell((current)=>{
-      current = current-1 % monthDays.length;
+      current = mod(current-1,monthDays.length);
       if(current != mod(current, monthDays.length)){
         current = mod(current, monthDays.length);
       } else {
@@ -97,7 +97,7 @@ export default function Calendar() {
   
   const moveSelectedDown = () => {
     setSelectedCell((current)=>{
-      current = current+7 % monthDays.length;
+      current = mod(current+7,monthDays.length);
       if(current != mod(current, monthDays.length)){
         current = mod(current, monthDays.length);
       } else {
