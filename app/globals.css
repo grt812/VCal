@@ -132,6 +132,10 @@ button:hover {
   background-color: white;
 }
 
+.date.selected{
+  background-color: rgba(150,255,150,1);
+}
+
 /* #navigation-menu{
 } */
 
