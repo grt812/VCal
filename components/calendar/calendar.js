@@ -51,14 +51,18 @@ export default function Calendar() {
       moveSelectedUp();
     } else if(keyCode == 40){
       moveSelectedDown();
+    } else if(keyCode == 13){
+      //enter key pressed
     }
   };
 
   const moveSelectedRight = () => {
     setSelectedCell((current)=>{
       current = current+1 % monthDays.length;
-      if(current != current % monthDays.length ){
-        current = current % monthDays.length;
+      if(current != mod(current, monthDays.length)){
+        current = mod(current, monthDays.length);
+      } else {
+        console.log("current cell:" + current);
       }
       console.log(current);
       return current;
@@ -68,8 +72,10 @@ export default function Calendar() {
   const moveSelectedLeft = () => {
     setSelectedCell((current)=>{
       current = current-1 % monthDays.length;
-      if(current != current % monthDays.length ){
-        current = current % monthDays.length;
+      if(current != mod(current, monthDays.length)){
+        current = mod(current, monthDays.length);
+      } else {
+        console.log("current cell:" + current);
       }
       console.log(current);
       return current;
@@ -78,9 +84,11 @@ export default function Calendar() {
 
   const moveSelectedUp = () => {
     setSelectedCell((current)=>{
-      current = current-7 % monthDays.length;
-      if(current != current % monthDays.length ){
-        current = current % monthDays.length;
+      current = mod(current-7, monthDays.length);
+      if(current != mod(current, monthDays.length)){
+        current = mod(current, monthDays.length);
+      } else {
+        console.log("current cell:" + current);
       }
       console.log(current);
       return current;
@@ -90,12 +98,18 @@ export default function Calendar() {
   const moveSelectedDown = () => {
     setSelectedCell((current)=>{
       current = current+7 % monthDays.length;
-      if(current != current % monthDays.length ){
-        current = current % monthDays.length;
+      if(current != mod(current, monthDays.length)){
+        current = mod(current, monthDays.length);
+      } else {
+        console.log("current cell:" + current);
       }
       console.log(current);
       return current;
     });
+  }
+
+  function mod(n, m) {
+    return ((n % m) + m) % m;
   }
 
 
