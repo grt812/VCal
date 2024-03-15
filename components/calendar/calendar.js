@@ -41,15 +41,15 @@ export default function Calendar() {
 
   //Add event listener for keydown to switch between cells
   const handleKeyDown = (event) => {
-    const { key } = event;
+    const { keyCode } = event;
 
-    if(key == 37){
+    if(keyCode == 37){
       moveSelectedLeft();
-    } else if(key == 39){
+    } else if(keyCode == 39){
       moveSelectedRight();
-    } else if(key == 38){
+    } else if(keyCode == 38){
       moveSelectedUp();
-    } else if(key == 40){
+    } else if(keyCode == 40){
       moveSelectedDown();
     }
   };
@@ -60,6 +60,7 @@ export default function Calendar() {
       if(current != current % monthDays.length ){
         current = current % monthDays.length;
       }
+      console.log(current);
       return current;
     });
   }
@@ -70,6 +71,7 @@ export default function Calendar() {
       if(current != current % monthDays.length ){
         current = current % monthDays.length;
       }
+      console.log(current);
       return current;
     });
   }
@@ -80,6 +82,7 @@ export default function Calendar() {
       if(current != current % monthDays.length ){
         current = current % monthDays.length;
       }
+      console.log(current);
       return current;
     });
   }
@@ -90,6 +93,7 @@ export default function Calendar() {
       if(current != current % monthDays.length ){
         current = current % monthDays.length;
       }
+      console.log(current);
       return current;
     });
   }
@@ -130,16 +134,17 @@ export default function Calendar() {
       <Navigation id="navigation-menu" currentDate={date} prevMonth={goToPrevMonth} nextMonth={goToNextMonth} ></Navigation>
       <div id="calendar">
         <div className="days">
+          {console.log(selectedCell)}
           {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => (
-            <div key={day} className={"day " + index == selectedCell}>{day}</div>
+            <div key={day} className={"day"}>{day}</div>
           ))}
         </div>
         <div className="dates">
           {blankCells.map((cell, index) => (
             <div key={index} className="date empty"></div>
           ))}
-          {monthDays.map(day => (
-            <div key={day} className="date">{day}</div>
+          {monthDays.map((day, index) => (
+            <div key={day} className={"date "+ (index == selectedCell ? "selected" : "")}>{day}</div>
           ))}
         </div>
       </div>
