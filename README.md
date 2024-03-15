@@ -6,13 +6,13 @@ VCal is an open-source calendar application developed by three students at Renss
 
 Frontend:
 - React.js
-- Next.js
 - Javascript
 - HTML
 - CSS 
 - Tailwind
 
 Backend:
+- Next.js
 - MongoDB
 - Google OAuth
 
