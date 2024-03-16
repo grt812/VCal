@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Navigation from '../navigation/navigation';
+import Modal from './modal';
 
 
 export default function Calendar() {
@@ -52,7 +53,7 @@ export default function Calendar() {
     } else if(keyCode == 40){
       moveSelectedDown();
     } else if(keyCode == 13){
-      //enter key pressed
+      setModal(true);
     }
   };
 
@@ -129,6 +130,7 @@ export default function Calendar() {
 
   const AddEvent = (eventData) => {
     setEvents([...events, eventData]); 
+    setModal(false);
   };
 
   const EditEvent = (index, updatedEvent) => {
@@ -162,6 +164,16 @@ export default function Calendar() {
           ))}
         </div>
       </div>
+    </div>
+  );
+  
+  return (
+    <div id="calendar-container">
+      <Navigation id="navigation-menu" currentDate={date} prevMonth={goToPrevMonth} nextMonth={goToNextMonth}></Navigation>
+      <div id="calendar">
+        {/* ... */}
+      </div>
+      {modal && <Modal onClose={() => setModal(false)} onSubmit={addEvent} />}
     </div>
   );
 };
