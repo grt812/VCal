@@ -1,0 +1,58 @@
+Introduction
+The objective of this formative usability test is to assess how user friendly is the current design of the login page for the calendar website and how efficient the main calendar UI is. Since the user group of this website is super users who are looking for tools that would make their calendar making process more smooth and more efficient. We screened the user to get the correct user group. Due to the tight schedule we will only test 3 participants, but it should point out about 60% of the problems. 
+
+Participant Screening 
+
+Q1: On a scale of 1-10, typically how comfortable are you navigating websites?
+Note:Participants are disqualified if they answer below 5.
+
+Q2: Share your experience with a calendar app or website.
+Note:Participants that don't have related experiences disqualify. 
+
+Q3: On a scale of 1-10, how often do you explore different ways to complete a task more efficiently?
+Note:Participants are disqualified if they answer below a 5
+
+Q4: On a scale of 1-10, what is your feeling toward the calendar app/website you are using(1 being very unsatisfied, 10 being very satisfied)?
+Note:Participants that responded with an 8 or higher are automatically disqualified. Since our calendar has a learning curve, if the user is already very comfortable with an existing calendar app then there is no point in switching to a new one. 
+
+Scenarios
+Scenario 1: When the participants are ready for testing, they will engage in a scenario in which they are a first time user that will navigate through the website in an attempt  to create an account in our login page. During this process the participants will be asked to speak out their thoughts. Once both scenarios are complete, participants will complete a post test questionnaire which is designed to help us better assess how effective the login page design and the calendar main page UI is. 
+
+
+
+Instructions:
+As you are completing the task, please tell us about your thoughts on every details.
+Find the log in button in the main page
+Click on create an account in the log in page
+Create username and password
+The moderator will reveal the second part of the website for scenario 2
+
+
+
+
+Scenario 2: 	After going through the first scenario, the participant will be taken through scenario 2. The participants will be starting on the main calendar page of the Vcal website. They will be asked to use the website to create their daily calendar using only a keyboard, although because the website is in development they can only try a few of the features like using arrow keys to navigate through the dates, and have to manually enter the daily tasks. 
+
+
+
+Instructions:
+As you interact with the site, please tell us what you are doing and thinking at each step.
+Navigate to any date using the arrow key
+Click enter to start editing that date
+Using keyboard to type the daily task
+Use the arrow key to navigate to at least 3 other dates
+Using keyboard to type the schedule for the other dates
+
+
+
+Feedback Method
+During our usability tests, participants will be closely observed as they interact with the login page and the main calendar page of the Vcal website. This observation includes their comments, their actions, and their expressions..
+Following the completion of the test, participants will be asked to respond to a series of posttest questions. The user will rate the statement with 1 being strongly disagree and 10 being strongly agree.
+
+"I found the website complex."
+"I thought the website was easy to use."
+"I think that I would need the support of a technical person to be able to use this website."
+"I found various functions on this website to be more effective than the existing calendar website that I used ."
+"I thought there was too much inconsistency in this website."
+"I would imagine that most people would learn to use this website very quickly."
+"I felt confident using the website."
+"I needed to learn a lot of things before I could get going with this website."
