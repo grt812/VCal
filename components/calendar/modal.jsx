@@ -4,8 +4,8 @@ const Modal = ({ onClose, onSubmit }) => {
   const [eventData, setEventData] = useState({
     title: '',
     description: '',
-    startTime: null,
-    endTime: null,
+    startTime: '',
+    endTime: '',
   });
 
   const handleInputChange = (e) => {
@@ -23,11 +23,12 @@ const Modal = ({ onClose, onSubmit }) => {
     setEventData({
       title: '',
       description: '',
-      startTime: null,
-      endTime: null,
+      startTime: '',
+      endTime: '',
     });
   };
 
+  //TODO: START AND END TIME BLANK NO ENTIRES
   return (
     <div className="modal">
       <div className="modal-content">

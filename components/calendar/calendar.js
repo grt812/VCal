@@ -10,6 +10,7 @@ export default function Calendar() {
   // Get current date
   const currentDate = new Date();
   const [date, setDate] = useState(currentDate);
+  const [showModal, setShowModal] = useState(false);
   const [selectedCell, setSelectedCell] = useState(0);
 
   // Function to get the number of days in a month
@@ -53,7 +54,7 @@ export default function Calendar() {
     } else if(keyCode == 40){
       moveSelectedDown();
     } else if(keyCode == 13){
-      setModal(true);
+      setShowModal(true);
     }
   };
 
@@ -130,7 +131,7 @@ export default function Calendar() {
 
   const AddEvent = (eventData) => {
     setEvents([...events, eventData]); 
-    setModal(false);
+    setShowModal(false);
   };
 
   const EditEvent = (index, updatedEvent) => {
@@ -144,6 +145,54 @@ export default function Calendar() {
     updatedEvents.splice(index, 1);
     setEvents(updatedEvents);
   };
+
+  return (
+    <div id="calendar-container">
+      <Navigation
+        id="navigation-menu"
+        currentDate={date}
+        prevMonth={goToPrevMonth}
+        nextMonth={goToNextMonth}
+      />
+      <div id="calendar">
+        <div className="days">
+          {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, index) => (
+            <div key={day} className="day">
+              {day}
+            </div>
+          ))}
+        </div>
+        <div className="dates">
+          {blankCells.map((_, index) => (
+            <div key={`blank-${index}`} className="date empty"></div>
+          ))}
+          {monthDays.map((day, index) => (
+            <div
+              key={day}
+              className={`date ${index === selectedCell ? 'selected' : ''}`}
+              onClick={() => {
+                setSelectedCell(index);
+                //DAY CLICK DEBUG CHECK CONFIRMED REMOVE LATER.
+                alert(`You clicked on day ${day}`);
+              }}
+            >
+              {day}
+            </div>
+          ))}
+        </div>
+      </div>
+      {showModal && (
+        <Modal
+          onClose={() => setShowModal(false)}
+          onSubmit={(eventData) => {
+            // Handle event data submission here
+            console.log(eventData);
+            setShowModal(false);
+          }}
+        />
+      )}
+    </div>
+  );  
 
   return (
     <div id="calendar-container">
@@ -166,7 +215,7 @@ export default function Calendar() {
       </div>
     </div>
   );
-  
+
   return (
     <div id="calendar-container">
       <Navigation id="navigation-menu" currentDate={date} prevMonth={goToPrevMonth} nextMonth={goToNextMonth}></Navigation>
