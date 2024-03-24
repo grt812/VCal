@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Navigation from '../navigation/navigation';
-import Modal from './modal';
+import Modal from '../modal/modal';
 
 
 export default function Calendar() {
