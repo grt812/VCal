@@ -9,8 +9,10 @@ import Modal from '../modal/modal';
 export default function Calendar() {
   // Get current date
   const currentDate = new Date();
+  const prevDateObj = new Date();
+  prevDateObj.setMonth(currentDate.getMonth() - 1);
   const [date, setDate] = useState(currentDate);
-  const [prevDate, setPrevDate] = useState(currentDate);
+  const [prevDate, setPrevDate] = useState(prevDateObj);
   const [showModal, setShowModal] = useState(false);
   const [selectedCell, setSelectedCell] = useState(0);
 
@@ -28,6 +30,12 @@ export default function Calendar() {
     return new Date(year, month, 1).getDay();
   };
 
+  const getPrevMonthDays = (date) => {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    return new Date(year, month, 0).getDate();
+  }
+
   // Function to handle previous month button click
   const goToPrevMonth = () => {
     const newDate = new Date(date);
@@ -35,7 +43,7 @@ export default function Calendar() {
     newDate.setMonth(newDate.getMonth() - 1);
     newPrevDate.setMonth(newPrevDate.getMonth() - 2);
     setDate(newDate);
-    setDate(prevDate);
+    setPrevDate(prevDate);
   };
 
   // Function to handle next month button click
@@ -44,7 +52,7 @@ export default function Calendar() {
     const newPrevDate = new Date(date);
     newDate.setMonth(newDate.getMonth() + 1);
     setDate(newDate);
-    setDate(newPrevDate);
+    setPrevDate(newPrevDate);
   };
 
   //Add event listener for keydown to switch between cells
@@ -132,6 +140,7 @@ export default function Calendar() {
 
   const daysInMonth = getDaysInMonth(date);
   const firstDayOfMonth = getFirstDayOfMonth(date);
+  const prevMonthDays = getPrevMonthDays(date);
   const monthDays = Array.from({ length: daysInMonth }, (_, index) => index + 1);
   const blankCells = Array.from({ length: firstDayOfMonth }, (_, index) => index);
 
