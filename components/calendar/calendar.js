@@ -172,8 +172,6 @@ export default function Calendar() {
               className={`date ${index === selectedCell ? 'selected' : ''}`}
               onClick={() => {
                 setSelectedCell(index);
-                //DAY CLICK DEBUG CHECK CONFIRMED REMOVE LATER.
-                alert(`You clicked on day ${day}`);
               }}
             >
               {day}
