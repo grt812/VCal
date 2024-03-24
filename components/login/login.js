@@ -1,3 +1,10 @@
+import React from 'react';
+
+export default function LoginPage() {
+    // Function to handle Google login button click
+    const handleGoogleLogin = () => {
+    };
+
 export default function loginPage() {
     return(
         <div class="login-container">
