@@ -10,6 +10,7 @@ export default function Calendar() {
   // Get current date
   const currentDate = new Date();
   const [date, setDate] = useState(currentDate);
+  const [prevDate, setPrevDate] = useState(currentDate);
   const [showModal, setShowModal] = useState(false);
   const [selectedCell, setSelectedCell] = useState(0);
 
@@ -30,15 +31,20 @@ export default function Calendar() {
   // Function to handle previous month button click
   const goToPrevMonth = () => {
     const newDate = new Date(date);
+    const newPrevDate = new Date(date); 
     newDate.setMonth(newDate.getMonth() - 1);
+    newPrevDate.setMonth(newPrevDate.getMonth() - 2);
     setDate(newDate);
+    setDate(prevDate);
   };
 
   // Function to handle next month button click
   const goToNextMonth = () => {
     const newDate = new Date(date);
+    const newPrevDate = new Date(date);
     newDate.setMonth(newDate.getMonth() + 1);
     setDate(newDate);
+    setDate(newPrevDate);
   };
 
   //Add event listener for keydown to switch between cells
